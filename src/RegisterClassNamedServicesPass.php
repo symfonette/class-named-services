@@ -55,19 +55,6 @@ class RegisterClassNamedServicesPass implements CompilerPassInterface
         if (isset($e)) {
             throw $e;
         }
-
-        $this->container = $container;
-        $this->types = [];
-        $this->definedTypes = [];
-
-        foreach ($this->types as $type => $services) {
-            $this->registerService($type, $services);
-        }
-
-        $this->container = null;
-        $this->types = [];
-        $this->definedTypes = [];
-        $this->reflectionClasses = [];
     }
 
     private function populateAvailableTypes($id, Definition $definition)
