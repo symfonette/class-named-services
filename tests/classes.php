@@ -10,32 +10,39 @@
  * file that was distributed with this source code.
  */
 
-namespace Symfonette\ClassNamedServices\Tests;
-
-interface IA
-{
+namespace {
+    class Symfonette_ClassNamedServices_Tests_A
+    {
+    }
 }
 
-interface IC
+namespace Symfonette\ClassNamedServices\Tests
 {
-}
+    interface IA
+    {
+    }
 
-interface IB extends IC
-{
-}
+    interface IC
+    {
+    }
 
-class C implements IB
-{
-}
+    interface IB extends IC
+    {
+    }
 
-class B extends C
-{
-}
+    class C implements IB
+    {
+    }
 
-class A extends B implements IA
-{
-}
+    class B extends C
+    {
+    }
 
-class E
-{
+    class A extends B implements IA
+    {
+    }
+
+    class E
+    {
+    }
 }

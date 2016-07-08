@@ -86,4 +86,12 @@ class RegisterClassNamedServicesPassTest extends \PHPUnit_Framework_TestCase
 
         $this->assertInstanceOf(AmbiguousDefinition::class, $container->getDefinition(E::class));
     }
+
+    public function testRegisterEqualsServiceAndClassNames()
+    {
+        $container = $this->container;
+        $container->register('symfonette_classnamedservices_tests_a', 'Symfonette_ClassNamedServices_Tests_A');
+
+        $container->compile();
+    }
 }

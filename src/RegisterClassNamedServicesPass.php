@@ -110,6 +110,10 @@ class RegisterClassNamedServicesPass implements CompilerPassInterface
             return;
         }
 
+        if (strtolower($type) === strtolower($id)) {
+            return;
+        }
+
         $this->types[$type][] = $id;
     }
 

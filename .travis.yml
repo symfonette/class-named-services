@@ -21,7 +21,7 @@ matrix:
 
 before_script:
   - composer self-update
-  - composer install --prefer-dist --no-interaction ${COMPOSER_FLAGS:-""}
+  - composer update --prefer-dist --no-interaction $COMPOSER_FLAGS
 
 script:
   - vendor/bin/phpunit $PHPUNIT_COVERAGE
