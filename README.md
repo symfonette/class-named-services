@@ -3,6 +3,7 @@ Class Named Services
 
 [![Packagist](https://img.shields.io/packagist/v/symfonette/class-named-services.svg?style=flat-square)](https://packagist.org/packages/symfonette/class-named-services)
 [![Build Status](https://img.shields.io/travis/symfonette/class-named-services.svg?style=flat-square)](https://travis-ci.org/symfonette/class-named-services)
+[![StyleCI](https://styleci.io/repos/52609160/shield)](https://styleci.io/repos/52609160)
 [![Scrutinizer Code Quality](https://img.shields.io/scrutinizer/g/symfonette/class-named-services.svg?style=flat-square)](https://scrutinizer-ci.com/g/symfonette/class-named-services)
 [![SensioLabsInsight](https://img.shields.io/sensiolabs/i/2f5b60cc-519e-468c-a9cc-6d0eed908012.svg?style=flat-square)](https://insight.sensiolabs.com/projects/2f5b60cc-519e-468c-a9cc-6d0eed908012)
 

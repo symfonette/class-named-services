@@ -26,7 +26,9 @@ class RegisterClassNamedServicesPass implements CompilerPassInterface
 
     public function process(ContainerBuilder $container)
     {
-        $throwingAutoloader = function ($class) { throw new \ReflectionException(sprintf('Class %s does not exist', $class)); };
+        $throwingAutoloader = function ($class) {
+            throw new \ReflectionException(sprintf('Class %s does not exist', $class));
+        };
         spl_autoload_register($throwingAutoloader);
 
         try {
