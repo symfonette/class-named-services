@@ -10,11 +10,11 @@
  * file that was distributed with this source code.
  */
 
-namespace Symfonette\DependencyInjection\ClassNamedServices\Tests;
+namespace Symfonette\ClassNamedServices\Tests;
 
-use Symfonette\DependencyInjection\ClassNamedServices\CheckAmbiguousReferencesPass;
-use Symfonette\DependencyInjection\ClassNamedServices\ContainerBuilderConfigurator;
-use Symfonette\DependencyInjection\ClassNamedServices\RegisterClassNamedServicesPass;
+use Symfonette\ClassNamedServices\CheckAmbiguousReferencesPass;
+use Symfonette\ClassNamedServices\ContainerBuilderConfigurator;
+use Symfonette\ClassNamedServices\RegisterClassNamedServicesPass;
 use Symfony\Component\DependencyInjection\Compiler\PassConfig;
 use Symfony\Component\DependencyInjection\Compiler\ResolveReferencesToAliasesPass;
 use Symfony\Component\DependencyInjection\ContainerBuilder;

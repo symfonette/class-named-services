@@ -10,9 +10,9 @@
  * file that was distributed with this source code.
  */
 
-namespace Symfonette\DependencyInjection\ClassNamedServices;
+namespace Symfonette\ClassNamedServices;
 
-use Symfonette\DependencyInjection\ClassNamedServices\Exception\AmbiguousReferenceException;
+use Symfonette\ClassNamedServices\Exception\AmbiguousReferenceException;
 use Symfony\Component\DependencyInjection\Compiler\CompilerPassInterface;
 use Symfony\Component\DependencyInjection\ContainerBuilder;
 use Symfony\Component\DependencyInjection\Exception\ServiceNotFoundException;

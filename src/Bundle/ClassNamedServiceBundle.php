@@ -10,9 +10,9 @@
  * file that was distributed with this source code.
  */
 
-namespace Symfonette\DependencyInjection\ClassNamedServices\Bundle;
+namespace Symfonette\ClassNamedServices\Bundle;
 
-use Symfonette\DependencyInjection\ClassNamedServices\ContainerBuilderConfigurator;
+use Symfonette\ClassNamedServices\ContainerBuilderConfigurator;
 use Symfony\Component\DependencyInjection\ContainerBuilder;
 use Symfony\Component\HttpKernel\Bundle\Bundle;
 

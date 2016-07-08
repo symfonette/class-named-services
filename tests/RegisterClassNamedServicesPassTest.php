@@ -10,10 +10,10 @@
  * file that was distributed with this source code.
  */
 
-namespace Symfonette\DependencyInjection\ClassNamedServices\Tests;
+namespace Symfonette\ClassNamedServices\Tests;
 
-use Symfonette\DependencyInjection\ClassNamedServices\AmbiguousDefinition;
-use Symfonette\DependencyInjection\ClassNamedServices\ContainerBuilderConfigurator;
+use Symfonette\ClassNamedServices\AmbiguousDefinition;
+use Symfonette\ClassNamedServices\ContainerBuilderConfigurator;
 use Symfony\Component\DependencyInjection\ContainerBuilder;
 use Symfony\Component\DependencyInjection\ContainerInterface;
 use Symfony\Component\DependencyInjection\Definition;

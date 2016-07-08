@@ -17,12 +17,12 @@
     ],
     "autoload": {
         "psr-4": {
-            "Symfonette\\DependencyInjection\\ClassNamedServices\\": "src"
+            "Symfonette\\ClassNamedServices\\": "src"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "Symfonette\\DependencyInjection\\ClassNamedServices\\Tests\\": "tests"
+            "Symfonette\\ClassNamedServices\\Tests\\": "tests"
         },
         "files": ["tests/classes.php"]
     },
@@ -35,7 +35,7 @@
         "symfony/config": "^2.8|^3.0",
         "symfony/var-dumper": "^2.8|^3.0",
         "symfony/http-kernel": "^2.8|^3.0",
-        "fabpot/php-cs-fixer": "^1.9",
+        "friendsofphp/php-cs-fixer": "^1.9",
         "sllh/php-cs-fixer-styleci-bridge": "^2.0"
     },
     "suggest": {

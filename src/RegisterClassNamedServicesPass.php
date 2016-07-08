@@ -10,16 +10,13 @@
  * file that was distributed with this source code.
  */
 
-namespace Symfonette\DependencyInjection\ClassNamedServices;
+namespace Symfonette\ClassNamedServices;
 
 use Symfony\Component\DependencyInjection\Alias;
 use Symfony\Component\DependencyInjection\Compiler\CompilerPassInterface;
 use Symfony\Component\DependencyInjection\ContainerBuilder;
 use Symfony\Component\DependencyInjection\Definition;
 
-/**
- * @author Martin Hasoň <martin.hason@gmail.com>
- */
 class RegisterClassNamedServicesPass implements CompilerPassInterface
 {
     private $container;
@@ -43,8 +40,8 @@ class RegisterClassNamedServicesPass implements CompilerPassInterface
             foreach ($this->types as $type => $services) {
                 $this->registerService($type, $services);
             }
-        } catch (\Error $e) {
         } catch (\Exception $e) {
+        } catch (\Throwable $e) {
         }
 
         spl_autoload_unregister($throwingAutoloader);

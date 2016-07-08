@@ -10,7 +10,7 @@
  * file that was distributed with this source code.
  */
 
-namespace Symfonette\DependencyInjection\ClassNamedServices\Tests;
+namespace Symfonette\ClassNamedServices\Tests;
 
 interface IA
 {

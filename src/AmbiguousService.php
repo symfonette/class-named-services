@@ -10,9 +10,9 @@
  * file that was distributed with this source code.
  */
 
-namespace Symfonette\DependencyInjection\ClassNamedServices;
+namespace Symfonette\ClassNamedServices;
 
-use Symfonette\DependencyInjection\ClassNamedServices\Exception\AmbiguousServiceException;
+use Symfonette\ClassNamedServices\Exception\AmbiguousServiceException;
 
 class AmbiguousService
 {

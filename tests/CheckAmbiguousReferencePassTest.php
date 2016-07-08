@@ -10,10 +10,10 @@
  * file that was distributed with this source code.
  */
 
-namespace Symfonette\DependencyInjection\ClassNamedServices\Tests;
+namespace Symfonette\ClassNamedServices\Tests;
 
-use Symfonette\DependencyInjection\ClassNamedServices\ContainerBuilderConfigurator;
-use Symfonette\DependencyInjection\ClassNamedServices\Exception\AmbiguousReferenceException;
+use Symfonette\ClassNamedServices\ContainerBuilderConfigurator;
+use Symfonette\ClassNamedServices\Exception\AmbiguousReferenceException;
 use Symfony\Component\DependencyInjection\ContainerBuilder;
 use Symfony\Component\DependencyInjection\Reference;
 
@@ -38,7 +38,7 @@ class CheckAmbiguousReferencePassTest extends \PHPUnit_Framework_TestCase
         $definition->setArguments([new Reference(E::class)]);
 
         $this->expectException(AmbiguousReferenceException::class);
-        $this->expectExceptionMessage('Ambiguous services for class "Symfonette\DependencyInjection\ClassNamedServices\Tests\E". You should use concrete service name instead of class: "foo", "bar"');
+        $this->expectExceptionMessage('Ambiguous services for class "Symfonette\ClassNamedServices\Tests\E". You should use concrete service name instead of class: "foo", "bar"');
 
         $container->compile();
     }
