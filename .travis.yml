@@ -11,11 +11,20 @@ php:
 cache:
   directories:
     - $HOME/.composer/cache
-    - vendor
+
+matrix:
+  include:
+    - php: 5.5
+      env: COMPOSER_FLAGS="--prefer-lowest"
+    - php: 7.0
+      env: PHPUNIT_COVERAGE="--coverage-clover coverage.clover"
 
 before_script:
   - composer self-update
-  - composer install --prefer-source --no-interaction
+  - composer install --prefer-dist --no-interaction ${COMPOSER_FLAGS:-""}
 
 script:
-  - php vendor/bin/phpunit
+  - vendor/bin/phpunit $PHPUNIT_COVERAGE
+
+after_script:
+  - if [[ "$PHPUNIT_COVERAGE" != "" ]]; then wget https://scrutinizer-ci.com/ocular.phar && php ocular.phar code-coverage:upload --format=php-clover coverage.clover; fi
