@@ -36,19 +36,15 @@ class RegisterClassNamedServicesPassTest extends \PHPUnit_Framework_TestCase
         $container->register('foo', A::class);
         $container->compile();
 
-        $services = $container->getServiceIds();
-        $this->assertArraySubset(array_map('strtolower', [
-            'foo',
-            IB::class,
-            IC::class,
-            IA::class,
-            A::class,
-            B::class,
-            C::class,
-        ]), $services);
-
-        $this->assertContains(strtolower(ContainerInterface::class), $services);
-        $this->assertContains('service_container', $services);
+        $this->assertTrue($container->has('foo'));
+        $this->assertTrue($container->has('service_container'));
+        $this->assertTrue($container->has(IB::class));
+        $this->assertTrue($container->has(IC::class));
+        $this->assertTrue($container->has(IA::class));
+        $this->assertTrue($container->has(A::class));
+        $this->assertTrue($container->has(B::class));
+        $this->assertTrue($container->has(C::class));
+        $this->assertTrue($container->has(ContainerInterface::class));
     }
 
     public function testRegisterFqcnServicesAsAliases()

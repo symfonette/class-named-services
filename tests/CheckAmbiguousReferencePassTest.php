@@ -13,7 +13,6 @@
 namespace Symfonette\ClassNamedServices\Tests;
 
 use Symfonette\ClassNamedServices\ContainerBuilderConfigurator;
-use Symfonette\ClassNamedServices\Exception\AmbiguousReferenceException;
 use Symfony\Component\DependencyInjection\ContainerBuilder;
 use Symfony\Component\DependencyInjection\Reference;
 
@@ -28,6 +27,10 @@ class CheckAmbiguousReferencePassTest extends \PHPUnit_Framework_TestCase
         (new ContainerBuilderConfigurator())->configure($this->container);
     }
 
+    /**
+     * @expectedException Symfonette\ClassNamedServices\Exception\AmbiguousReferenceException
+     * @expectedExceptionMessage Ambiguous services for class "Symfonette\ClassNamedServices\Tests\E". You should use concrete service name instead of class: "foo", "bar"
+     */
     public function testThrowExceptionForAmbiguousDefinitionInArguments()
     {
         $container = $this->container;
@@ -36,9 +39,6 @@ class CheckAmbiguousReferencePassTest extends \PHPUnit_Framework_TestCase
 
         $definition = $container->register('baz', A::class);
         $definition->setArguments([new Reference(E::class)]);
-
-        $this->expectException(AmbiguousReferenceException::class);
-        $this->expectExceptionMessage('Ambiguous services for class "Symfonette\ClassNamedServices\Tests\E". You should use concrete service name instead of class: "foo", "bar"');
 
         $container->compile();
     }
